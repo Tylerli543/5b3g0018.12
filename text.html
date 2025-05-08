@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>新幹線介紹</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0bd1ba;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .flower {
+      background-color: #4dd0e1;
+      padding: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .flower img {
+      width: 100%;
+      height: auto;
+    }
+
+    .caption {
+      text-align: center;
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        display: none;
+        background-color: #00796b;
+        padding: 10px;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>新幹線</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="#">選項一</a>
+      <a href="#">選項二</a>
+      <a href="#">選項三</a>
+      <a href="#">選項四</a>
+      <a href="#">選項五</a>
+      <a href="#">選項六</a>
+    </nav>
+  </header>
+
+  <div class="gallery">
+    <div class="flower">
+      <img src="1726803101_276_015979f71215f089e2f1d447c1eec374.jpg" alt="E5">
+      <div class="caption">E5</div>
+    </div>
+    <div class="flower">
+      <img src="1726803101_276_015979f71215f089e2f1d447c1eec34.jpg" alt="E6">
+      <div class="caption">E6</div>
+    </div>
+    <div class="flower">
+      <img src="THSR_700T_TR17_20130907.jpg" alt="700T">
+      <div class="caption">700T</div>
+    </div>
+    <div class="flower">
+      <img src="1459.webp" alt="0系">
+      <div class="caption">0系</div>
+    </div>
+    <div class="flower">
+        <img src="https___imgix-proxy.n8s.jp_DSXZQO5116107019072024000000-2.avif" alt="500系">
+        <div class="caption">500系</div>
+      </div>
+      <div class="flower">
+        <img src="Type923-T4.jpg" alt="黃醫生">
+        <div class="caption">黃醫生</div>
+      </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>
+
